@@ -16,6 +16,9 @@
 		},
 		{
 			"include": "#operators"
+		},
+		{
+			"include": "#labels"
 		}
 	],
 	"repository": {
@@ -47,6 +50,12 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"labels": {
+			"patterns": [{
+				"name": "entity.name.label.barcasm",
+				"match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\:"
+			}]
 		}
 	},
 	"scopeName": "source.basm"

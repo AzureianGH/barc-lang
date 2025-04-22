@@ -2,7 +2,8 @@
   "name": "barc-lang",
   "displayName": "Barc-Lang",
   "description": "Syntax Highlighter for BARC Assembly",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "publisher": "nathanhornby",
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -31,8 +32,13 @@
       }
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AzureianGH/barc-lang"
+  },
   "devDependencies": {
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^10.1.0"
-  }
+  },
+  "icon": "BARCASM.png"
 }
