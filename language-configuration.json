@@ -1,0 +1,23 @@
+{
+    "comments": {
+        "lineComment": ";"
+    },
+
+    "autoClosingPairs": [
+        ["\"", "\""],
+        ["'", "'"]
+    ],
+
+    "surroundingPairs": [
+        ["\"", "\""],
+        ["'", "'"]
+    ],
+
+    "brackets": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"]
+    ],
+
+    "wordPattern": "\\b(DB|DW|HLT|MOV|LAA|SAA|MVI|LUMA|SUMA|ADD|SUB|ADI|SBI|INC|DEC|CMP|CPI|JMP|JZ|JNC|JZC|CALL|RET|JMM|JZM|JNZM|JCM|JNCM|CALM|AND|OR|XOR|NOT|NOP|SHL|SHR|ROL|ROR|IN|OUT|MULT|DIV|IDENT|A|B|C|D|E|L|H|0x[0-9A-Fa-f]+|0b[01]+|0[0-7]*|[0-9]+)\\b"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "barc-lang",
+  "displayName": "Barc-Lang",
+  "description": "Syntax Highlighter for BARC Assembly",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "barcasm",
+        "aliases": [
+          "BARC Assembly",
+          "barcasm"
+        ],
+        "extensions": [
+          ".basm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "barcasm",
+        "scopeName": "source.basm",
+        "path": "./syntaxes/barcasm.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^10.1.0"
+  }
+}

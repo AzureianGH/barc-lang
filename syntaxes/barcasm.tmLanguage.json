@@ -1,0 +1,53 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BARC Assembly",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#registers"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.barcasm",
+				"match": "\\b(DB|DW|HLT|MOV|LAA|SAA|MVI|LUMA|SUMA|ADD|SUB|ADI|SBI|INC|DEC|CMP|CPI|JMP|JZ|JNC|JZC|CALL|RET|JMM|JZM|JNZM|JCM|JNCM|CALM|AND|OR|XOR|NOT|NOP|SHL|SHR|ROL|ROR|IN|OUT|MULT|DIV|IDENT)\\b"
+			}]
+		},
+		"registers": {
+			"patterns": [{
+				"name": "variable.register.barcasm",
+				"match": "\\b(A|B|C|D|E|L|H)\\b"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric.barcasm",
+				"match": "\\b(0x[0-9A-Fa-f]+|0b[01]+|0[0-7]*|[0-9]+)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.barcasm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.barcasm",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.basm"
+}
