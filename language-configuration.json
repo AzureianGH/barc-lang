@@ -19,5 +19,15 @@
         ["(", ")"]
     ],
 
+    "registers": [
+        ["A", "Accumulator A"],
+        ["B", "Base B"],
+        ["C", "Counter C"],
+        ["D", "Data D"],
+        ["E", "Extra E"],
+        ["L", "Lower Half of M"],
+        ["H", "Higher Half of M"]
+    ],
+
     "wordPattern": "\\b(DB|DW|HLT|MOV|LAA|SAA|MVI|LUMA|SUMA|ADD|SUB|ADI|SBI|INC|DEC|CMP|CPI|JMP|JZ|JNC|JZC|CALL|RET|JMM|JZM|JNZM|JCM|JNCM|CALM|AND|OR|XOR|NOT|NOP|SHL|SHR|ROL|ROR|IN|OUT|MULT|DIV|IDENT|A|B|C|D|E|L|H|0x[0-9A-Fa-f]+|0b[01]+|0[0-7]*|[0-9]+|[A-Za-z_][A-Za-z0-9_]*:)\\b"
 }

@@ -2,7 +2,7 @@
   "name": "barc-lang",
   "displayName": "Barc-Lang",
   "description": "Syntax Highlighter for BARC Assembly",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "publisher": "nathanhornby",
   "engines": {
     "vscode": "^1.99.0"
@@ -21,6 +21,10 @@
         "extensions": [
           ".basm"
         ],
+        "icon": {
+           "light": "./icons/BQ.png",
+           "dark": "./icons/BQ.png"
+         },
         "configuration": "./language-configuration.json"
       }
     ],

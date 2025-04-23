@@ -19,19 +19,29 @@
 		},
 		{
 			"include": "#labels"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"comments": {
 			"patterns": [{
-				"name": "keyword.control.barcasm",
-				"match": "\\b(DB|DW|HLT|MOV|LAA|SAA|MVI|LUMA|SUMA|ADD|SUB|ADI|SBI|INC|DEC|CMP|CPI|JMP|JZ|JNC|JZC|CALL|RET|JMM|JZM|JNZM|JCM|JNCM|CALM|AND|OR|XOR|NOT|NOP|SHL|SHR|ROL|ROR|IN|OUT|MULT|DIV|IDENT)\\b"
+				"name": "comment.line.barcasm",
+				"begin": "; ",
+				"end": "$"
 			}]
 		},
 		"registers": {
 			"patterns": [{
 				"name": "variable.register.barcasm",
 				"match": "\\b(A|B|C|D|E|L|H)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.barcasm",
+				"match": "\\b(DB|DW|HLT|MOV|LAA|SAA|MVI|LUMA|SUMA|ADD|SUB|ADI|SBI|INC|DEC|CMP|CPI|JMP|JZ|JNC|JZC|CALL|RET|JMM|JZM|JNZM|JCM|JNCM|CALM|AND|OR|XOR|NOT|NOP|SHL|SHR|ROL|ROR|IN|OUT|MULT|DIV|IDENT)\\b"
 			}]
 		},
 		"numbers": {
@@ -52,10 +62,26 @@
 			]
 		},
 		"labels": {
-			"patterns": [{
-				"name": "entity.name.label.barcasm",
-				"match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\:"
-			}]
+			"patterns": [
+				{
+					"name": "entity.name.label.barcasm",
+					"match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\:",
+					"captures": {
+						"1": {
+							"name": "entity.name.label.definition.barcasm"
+						}
+					}
+				},
+				{
+					"name": "variable.label.reference.barcasm",
+					"match": "\\b(?<!\\b(?:DB|DW|HLT|MOV|LAA|SAA|MVI|LUMA|SUMA|ADD|SUB|ADI|SBI|INC|DEC|CMP|CPI|JMP|JZ|JNC|JZC|CALL|RET|JMM|JZM|JNZM|JCM|JNCM|CALM|AND|OR|XOR|NOT|NOP|SHL|SHR|ROL|ROR|IN|OUT|MULT|DIV|IDENT)\\b)\\b([A-Za-z_][A-Za-z0-9_]*)\\b",
+					"captures": {
+						"1": {
+							"name": "variable.label.reference.barcasm"
+						}
+					}
+				}
+			]
 		}
 	},
 	"scopeName": "source.basm"
